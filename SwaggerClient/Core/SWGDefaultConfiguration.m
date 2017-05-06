@@ -28,7 +28,7 @@
 - (instancetype) init {
     self = [super init];
     if (self) {
-        _host = @"http://api.smsfusion.com.au/";
+        _host = @"https://api.smsfusion.com.au/";
         _username = @"";
         _password = @"";
         _accessToken= @"";

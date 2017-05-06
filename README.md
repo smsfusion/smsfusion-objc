@@ -46,8 +46,10 @@ Import the following:
 #import <SwaggerClient/SWGHLRError.h>
 #import <SwaggerClient/SWGHLRResult.h>
 #import <SwaggerClient/SWGOutOfCredit.h>
+#import <SwaggerClient/SWGSMSResult.h>
 // load API classes for accessing endpoints
-#import <SwaggerClient/SWGDefaultApi.h>
+#import <SwaggerClient/SWGHLRApi.h>
+#import <SwaggerClient/SWGSMSApi.h>
 
 ```
 
@@ -73,7 +75,7 @@ NSString* *key = @"key_example"; // API Key as generated from the <a href='https
 NSString* *num = @"num_example"; // A single phone number or <a href='https://www.smsfusion.com.au/help/msisdn/'>MSDISDN</a>
 NSString* *cc = @"cc_example"; // 2 character country code <a href='https://en.wikipedia.org/wiki/ISO_3166-2'>ISO 3166-2</a> for formatting local numbers internationally (optional)
 
-SWGDefaultApi *apiInstance = [[SWGDefaultApi alloc] init];
+SWGHLRApi *apiInstance = [[SWGHLRApi alloc] init];
 
 // HLR number lookup
 [apiInstance getHLRWithKey:key
@@ -92,12 +94,13 @@ SWGDefaultApi *apiInstance = [[SWGDefaultApi alloc] init];
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://api.smsfusion.com.au/*
+All URIs are relative to *https://api.smsfusion.com.au/*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*SWGDefaultApi* | [**getHLR**](docs/SWGDefaultApi.md#gethlr) | **GET** /hlr/ | HLR number lookup
-*SWGDefaultApi* | [**getHLRCallback**](docs/SWGDefaultApi.md#gethlrcallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SWGHLRApi* | [**getHLR**](docs/SWGHLRApi.md#gethlr) | **GET** /hlr/ | HLR number lookup
+*SWGHLRApi* | [**getHLRCallback**](docs/SWGHLRApi.md#gethlrcallback) | **GET** /hlr-callback/ | HLR number lookup with results going to a callback URL
+*SWGSMSApi* | [**sendSMS**](docs/SWGSMSApi.md#sendsms) | **GET** /sms/ | Send an SMS
 
 
 ## Documentation For Models
@@ -106,6 +109,7 @@ Class | Method | HTTP request | Description
  - [SWGHLRError](docs/SWGHLRError.md)
  - [SWGHLRResult](docs/SWGHLRResult.md)
  - [SWGOutOfCredit](docs/SWGOutOfCredit.md)
+ - [SWGSMSResult](docs/SWGSMSResult.md)
 
 
 ## Documentation For Authorization
